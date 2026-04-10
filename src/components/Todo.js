@@ -26,15 +26,18 @@ function handleClick(i){
             ref={val}/>
             <button type="Submit">Add Todo</button>
             </form>
-            {
-                list.map((vals,inds)=> <div className="dta">
+               <ul>
+                {
+                list.map((vals,inds)=> <li className="dta">
                       <span>{vals}</span>
                       <button onClick={()=>handleClick(inds)}>Delete</button>
-                    </div>
+                    </li>
                 )
-
-
             }
+                </ul>
+
+
+            
         </div>
     )
 }
